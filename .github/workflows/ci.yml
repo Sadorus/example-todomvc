@@ -8,6 +8,8 @@ jobs:
         uses: actions/checkout@v1.0.0
       - name: Install
         run: yarn
+        with:
+          command: "http-server -p 8000"
       - name: Percy Test
         uses: percy/exec-action@v0.3.1
         with:
