@@ -1,7 +1,7 @@
 const PercyScript = require('@percy/script');
 
   PercyScript.run(async (page, percySnapshot) => {
-    await page.goto('http://localhost:8000', { widths: [375, 768, 1440] });
+    await page.goto('http://google.com', { widths: [375, 768, 1440] });
     await percySnapshot('Homepage');
     await page.type('.new-todo', 'A really important todo');
     await page.keyboard.press('Enter');
